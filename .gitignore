@@ -2,5 +2,6 @@
 
 # Folders
 .vscode
+__pycache__
 
 # Files
