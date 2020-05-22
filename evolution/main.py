@@ -4,11 +4,12 @@ import config
 
 def main():
     print("start algorithm")
-    population = generate_population(config.neurons_l1,
-                                     config.neurons_l2)
+    model_parameters = generate_population(config.model_parameter_space)
+    data = config.data
+
     for i in range(0,config.evolution_steps):
+        member_fitness = train_population(network_parameters,data)
         evolve_generation()
-        train_population()
 
 if __name__ == '__main__':
     main()

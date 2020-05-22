@@ -9,8 +9,11 @@ data = model_selection.train_test_split(X,
                                         random_state=0)
 
 # Experiment config
-evolution_steps = 5
+evolution_steps = 3
 
-# Network config
-neurons_l1 = [10,20,30]
-neurons_l2 = [10,20,30]
+# Model config
+neurons_l1 = [20,30]
+neurons_l2 = [10,20]
+
+model_parameter_space = (neurons_l1,
+                         neurons_l2)
