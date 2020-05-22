@@ -10,10 +10,16 @@ data = model_selection.train_test_split(X,
 
 # Experiment config
 evolution_steps = 3
+survival_ratio = 0.3
+mating_best_ratio = 0.3
+mating_lucky_ratio = 0.1
+selection_parameter = (survival_ratio,
+                       mating_best_ratio,
+                       mating_lucky_ratio)
 
 # Model config
-neurons_l1 = [20,30]
-neurons_l2 = [10,20]
+neurons_l1 = [20,30,40]
+neurons_l2 = [10,20,30]
 
 model_parameter_space = (neurons_l1,
                          neurons_l2)
