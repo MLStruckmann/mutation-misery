@@ -4,7 +4,8 @@ import config
 
 def main():
     print("start algorithm")
-    generate_population()
+    population = generate_population(config.neurons_l1,
+                                     config.neurons_l2)
     for i in range(0,config.evolution_steps):
         evolve_generation()
         train_population()
