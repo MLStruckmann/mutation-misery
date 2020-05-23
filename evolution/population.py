@@ -1,20 +1,20 @@
-from itertools import product
+import random
 from model import get_result
-import sklearn
 
-def generate_population(model_parameter_space):
-    print("generate population")
-    # Calculate cartesian product for all possible parameter combinations
-    model_parameters = list(product(model_parameter_space))
-    print(model_parameters)
-    print("population has {} members".format(len(model_parameters)))
-    return model_parameters
+def generate_population(model_parameter_space,n_population_start):
+    print("generate random population of size {}".format(n_population_start))
+    # Choose random subset from parameter space for each individual
+    population = []
+    for i in range(0,n_population_start):
+        individual = [random.choice(x) for x in model_parameter_space]
+        population.append(individual)
+    return population
 
-def train_population(model_parameters,data):
+def train_population(population,data):
     print("train population")
     member_fitness = []
-    for idx, parameter_setup in enumerate(model_parameters):
-        print("train model {} of {}".format(idx,len(model_parameters)))
+    for idx, parameter_setup in enumerate(population):
+        print("train model {} of {}".format(idx,len(population)))
         fitness_measure = get_result(parameter_setup,data)
         member_fitness.append(fitness_measure)
     return member_fitness
