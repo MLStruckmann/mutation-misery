@@ -29,7 +29,7 @@ def get_result(parameter_setup,data):
     y_test_predict = model.predict_classes(X_test_std)
     model_accuracy = accuracy_score(y_true=y_test,
                                     y_pred=y_test_predict)
-    print("model has accuracy of {}".format(model_accuracy))
+    print("model with accuracy of {} has parameters {}".format(model_accuracy,parameter_setup))
     return model_accuracy
 
 

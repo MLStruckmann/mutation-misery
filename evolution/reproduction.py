@@ -2,6 +2,8 @@ import random
 
 def mating(best_parameters,lucky_parameters):
     print("mating process")
+    print("best parameters: {}".format(best_parameters))
+    print("lucky parameters: {}".format(lucky_parameters))
     all_parameters = best_parameters + lucky_parameters
     new_parameters = []
 
@@ -12,11 +14,11 @@ def mating(best_parameters,lucky_parameters):
         child = []
 
         for ii in range(0,len(female)): # iterate over all parameters
-            parameter_choices = ((male[ii],) + (female[ii],))
+            parameter_choices = ((female[ii],) + (male[ii],))
             parameter_choice = random.choice(parameter_choices)
             child.append(parameter_choice)
         new_parameters.append(child)
-        
+    print("new parameters: {}".format(new_parameters))
     return new_parameters
 
 
