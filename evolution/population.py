@@ -14,7 +14,7 @@ def train_population(population,data):
     print("train population")
     member_fitness = []
     for idx, parameter_setup in enumerate(population):
-        print("train model {} of {}".format(idx,len(population)))
+        print("train model {} of {}".format(idx+1,len(population)))
         fitness_measure = get_result(parameter_setup,data)
         member_fitness.append(fitness_measure)
     return member_fitness

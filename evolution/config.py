@@ -5,7 +5,7 @@ n_population_start = 9
 evolution_steps = 3
 
 # Selection config
-survival_ratio = 0.3
+survival_ratio = 0.4
 mating_best_ratio = 0.3
 mating_lucky_ratio = 0.1
 n_survival_min = 1

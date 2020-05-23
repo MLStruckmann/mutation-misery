@@ -11,12 +11,15 @@ def evolve_generation(selection_parameter,population,member_fitness):
     n_mating_best_min,
     n_mating_lucky_min) = selection_parameter
 
+    results_dict = {}
+    for i in range(0,len(population)):
+        key = "model_" + str(i)
+        results_dict[key] = [member_fitness[i],population[i]]
+    results_list = sorted(results_dict.values())[::-1]
+    parameters_list_sorted = [x[1] for x in results_list]
+    print(results_list)
     population_size = len(population)
     new_population = []
-    results_dict = dict(zip(member_fitness,population))
-    # print(results_dict)
-    parameters_list_sorted = [results_dict[i] for i in sorted(results_dict)][::-1]
-    # print(parameters_list_sorted)
 
     # Calculate integer values for survival and mating
     n_survival = max(n_survival_min,round(population_size*survival_ratio))
@@ -38,7 +41,6 @@ def evolve_generation(selection_parameter,population,member_fitness):
 
     new_population.extend(survival_parameters)
     new_population.extend(new_parameters)
-    new_population.extend(lucky_parameters)
 
     print("population size changed from {} to {}".format(len(population),len(new_population)))
     print("The {} best and {} lucky individuals reproduced and {} survived".format(n_mating_best,
