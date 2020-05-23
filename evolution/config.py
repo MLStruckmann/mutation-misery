@@ -1,25 +1,30 @@
-from sklearn import datasets, model_selection
+from data_prep import data_prep
 
-# Data config
-data_dict = datasets.load_iris()
-X,y = data_dict["data"], data_dict["target"]
-data = model_selection.train_test_split(X, 
-                                        y, 
-                                        test_size=0.3,
-                                        random_state=0)
-
-# Experiment config
+# Evolution config
+n_population_start = 9
 evolution_steps = 3
+
+# Selection config
 survival_ratio = 0.3
 mating_best_ratio = 0.3
 mating_lucky_ratio = 0.1
+n_survival_min = 1
+n_mating_best_min = 2
+n_mating_lucky_min = 1
 selection_parameter = (survival_ratio,
                        mating_best_ratio,
-                       mating_lucky_ratio)
+                       mating_lucky_ratio,
+                       n_survival_min,
+                       n_mating_best_min,
+                       n_mating_lucky_min)
 
-# Model config
-neurons_l1 = [20,30,40]
-neurons_l2 = [10,20,30]
-
+# Model parameter config
+neurons_l1 = (40,50,60)
+neurons_l2 = (10,20,30)
+acitvation_func = ('relu',)
 model_parameter_space = (neurons_l1,
-                         neurons_l2)
+                         neurons_l2,
+                         acitvation_func)
+
+# Data config
+data = data_prep()
