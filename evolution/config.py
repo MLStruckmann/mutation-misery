@@ -18,13 +18,16 @@ selection_parameter = (survival_ratio,
                        n_mating_best_min,
                        n_mating_lucky_min)
 
-# Model parameter config
-neurons_l1 = (40,50,60)
-neurons_l2 = (10,20,30)
-acitvation_func = ('relu',)
-model_parameter_space = (neurons_l1,
-                         neurons_l2,
-                         acitvation_func)
+# Model config
+model_choice = 'model_nn'
+
+if model_choice == 'model_nn': 
+    neurons_l1 = (40,50,60)
+    neurons_l2 = (10,20,30)
+    acitvation_func = ('relu',)
+    model_parameter_space = (neurons_l1,
+                             neurons_l2,
+                             acitvation_func)
 
 # Data config
 data = data_prep()
