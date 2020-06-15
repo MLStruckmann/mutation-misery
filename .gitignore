@@ -4,5 +4,6 @@
 .vscode
 __pycache__
 testing
+.ipynb_checkpoints
 
 # Files
