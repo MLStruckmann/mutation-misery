@@ -1,0 +1,71 @@
+# experiment1 #
+###############
+n_population_start = 50
+evolution_steps = 3
+survival_ratio = 0.4
+mating_best_ratio = 0.3
+mating_lucky_ratio = 0.1
+neurons_l1 = [i for i in range(30,101)]
+neurons_l2 = [i for i in range(10,71)]
+
+# experiment2 #
+###############
+n_population_start = 500
+evolution_steps = 3
+survival_ratio = 0.4
+mating_best_ratio = 0.3
+mating_lucky_ratio = 0.1
+neurons_l1 = [i for i in range(30,131)]
+neurons_l2 = [i for i in range(10,71)]
+
+# experiment3 #
+###############
+n_population_start = 500
+evolution_steps = 3
+survival_ratio = 0.2
+mating_best_ratio = 0.15
+mating_lucky_ratio = 0.05
+neurons_l1 = [i for i in range(30,131)]
+neurons_l2 = [i for i in range(10,71)]
+
+# experiment4 #
+###############
+n_population_start = 500
+evolution_steps = 3
+survival_ratio = 0.0
+mating_best_ratio = 0.8
+mating_lucky_ratio = 0.0
+neurons_l1 = [i for i in range(30,131)]
+neurons_l2 = [i for i in range(10,71)]
+
+# experiment5 #
+###############
+n_population_start = 500
+evolution_steps = 3
+survival_ratio = 0.0
+mating_best_ratio = 0.0
+mating_lucky_ratio = 0.8
+
+# experiment6 #
+###############
+n_population_start = 300
+evolution_steps = 3
+survival_ratio = 0.6
+mating_best_ratio = 0.45
+mating_lucky_ratio = 0.15
+
+# experiment7 #
+###############
+n_population_start = 180
+evolution_steps = 3
+survival_ratio = 0.7
+mating_best_ratio = 0.5
+mating_lucky_ratio = 0.2
+
+# experiment8 #
+###############
+n_population_start = 150
+evolution_steps = 3
+survival_ratio = 0.9
+mating_best_ratio = 0.8
+mating_lucky_ratio = 0.15
