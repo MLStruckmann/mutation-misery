@@ -18,7 +18,6 @@ def mating(best_parameters,lucky_parameters):
             parameter_choice = random.choice(parameter_choices)
             child.append(parameter_choice)
         new_parameters.append(child)
-    print("new parameters: {}".format(new_parameters))
     return new_parameters
 
 

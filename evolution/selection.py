@@ -43,12 +43,12 @@ def evolve_generation(selection_parameter,population,member_fitness):
     new_population.extend(new_parameters)
 
     print("survival parameters: {}".format(survival_parameters))
-    print("sew parameters: {}".format(new_parameters))
+    print("new parameters: {}".format(new_parameters))
     print("population size changed from {} to {}".format(len(population),len(new_population)))
     print("the {} best and {} lucky individuals reproduced and {} survived".format(n_mating_best,
                                                                                    n_mating_lucky,
                                                                                    n_survival))
     
-    return new_population
+    return new_population, results_list
 
 

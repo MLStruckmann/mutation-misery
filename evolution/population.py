@@ -1,5 +1,7 @@
 import random
-from model import get_result
+import config
+if config.model_choice == 'model_nn':
+    from model_nn import get_result
 
 def generate_population(model_parameter_space,n_population_start):
     print("generate random population of size {}".format(n_population_start))
