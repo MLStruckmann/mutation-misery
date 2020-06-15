@@ -1,5 +1,6 @@
 from reproduction import mating
 import random
+import write_results
 
 def evolve_generation(selection_parameter,population,member_fitness):
     print("evolve generation")
@@ -18,6 +19,7 @@ def evolve_generation(selection_parameter,population,member_fitness):
     results_list = sorted(results_dict.values())[::-1]
     parameters_list_sorted = [x[1] for x in results_list]
     print(results_list)
+    write_results.log_write(results_list)
     population_size = len(population)
     new_population = []
 

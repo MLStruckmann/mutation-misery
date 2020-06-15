@@ -1,7 +1,7 @@
 from data_prep import data_prep
 
 # Evolution config
-n_population_start = 9
+n_population_start = 50
 evolution_steps = 3
 
 # Selection config
@@ -22,8 +22,8 @@ selection_parameter = (survival_ratio,
 model_choice = 'model_nn'
 
 if model_choice == 'model_nn': 
-    neurons_l1 = (40,50,60)
-    neurons_l2 = (10,20,30)
+    neurons_l1 = [i for i in range(30,101)]
+    neurons_l2 = [i for i in range(10,71)]
     acitvation_func = ('relu',)
     model_parameter_space = (neurons_l1,
                              neurons_l2,
