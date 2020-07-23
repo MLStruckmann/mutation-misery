@@ -20,7 +20,7 @@ on their classification accuracy on scikit-learn’s Iris dataset.
 
 #### Balanced reproduction - Shrinking
 
-![](screenshots/benchmark_case.png =250x)
+<img src="screenshots/benchmark_case.png" width="300" />
 
 * Population sizes = 500, 400, 320
 * Survival ratio = 0.4
@@ -29,7 +29,7 @@ on their classification accuracy on scikit-learn’s Iris dataset.
 
 #### Balanced reproduction - Strong shrinking
 
-![](screenshots/strongshrinking_case.png =250x)
+<img src="screenshots/strongshrinking_case.png" width="300" />
 
 * Population sizes = 500, 200, 80
 * Survival ratio = 0.2
@@ -38,7 +38,7 @@ on their classification accuracy on scikit-learn’s Iris dataset.
 
 #### Only random offset - Shrinking
 
-![](screenshots/randomselection_case.png =250x)
+<img src="screenshots/randomselection_case.png" width="300" />
 
 * Population sizes = 500, 400, 320
 * Survival ratio = 0.0
