@@ -18,33 +18,33 @@ on their classification accuracy on scikit-learn’s Iris dataset.
 
 ### Results
 
-##### Balanced reproduction - Shrinking
+#### Balanced reproduction - Shrinking
 
-![Benchmark case](screenshots/benchmark_case.png)
+![alt text](screenshots/benchmark_case.png "Benchmark case" width=300)
 
 * Population sizes = 500, 400, 320
 * Survival ratio = 0.4
 * Mating best ratio = 0.3
 * Mating lucky ratio = 0.1
 
-##### Balanced reproduction - Strong shrinking
+#### Balanced reproduction - Strong shrinking
 
-![Case 2](screenshots/strongshrinking_case.png)
+![alt text](screenshots/strongshrinking_case.png "Case 2" width=300)
 
 * Population sizes = 500, 200, 80
 * Survival ratio = 0.2
 * Mating best ratio = 0.15
 * Mating lucky ratio = 0.05
 
-##### Only random offset - Shrinking
+#### Only random offset - Shrinking
 
-![Case 3](screenshots/randomselection_case.png)
+![alt text](screenshots/randomselection_case.png "Case 3" width=300)
 
 * Population sizes = 500, 400, 320
 * Survival ratio = 0.0
 * Mating best ratio = 0.0
 * Mating lucky ratio = 0.8
 
-#### References
+### References
 
 [1] https://arxiv.org/abs/1904.06960
